@@ -6,12 +6,11 @@ using Microsoft.Extensions.Hosting;
 using ModuleManagementEventHandler.Events;
 using ModuleManagementEventHandler.Model;
 using Newtonsoft.Json.Linq;
-using Pitstop.Infrastructure.Messaging;
-using Pitstop.WorkshopManagementEventHandler.DataAccess;
+using Infrastructure.Messaging;
 using Serilog;
-using StudyProgramManagementEventHandler.Events;
+using ModuleManagementEventHandler.DataAccess;
 
-namespace StudyProgramManagementEventHandler
+namespace ModuleManagementEventHandler
 {
     public class EventHandler : IHostedService, IMessageHandlerCallback
     {

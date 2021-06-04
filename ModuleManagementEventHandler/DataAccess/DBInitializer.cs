@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Pitstop.WorkshopManagementEventHandler.DataAccess;
 using Polly;
 using Serilog;
 using System;
@@ -10,7 +9,7 @@ namespace ModuleManagementEventHandler.DataAccess
     {
         public static void Initialize(ModuleManagementDBContext context)
         {
-            Log.Information("StudyProgram Database");
+            Log.Information("Module Database");
 
             Policy
                 .Handle<Exception>()
@@ -18,7 +17,7 @@ namespace ModuleManagementEventHandler.DataAccess
                     (ex, ts) => { Log.Error("Error connection to DB. Retrying!"); })
                 .Execute(() => context.Database.Migrate());
 
-            Log.Information("StudyProgram Database done");
+            Log.Information("Module Database done");
         }
     }
 }

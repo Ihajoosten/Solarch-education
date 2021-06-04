@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ModuleManagementEventHandler.Model;
 
-namespace Pitstop.WorkshopManagementEventHandler.DataAccess
+namespace ModuleManagementEventHandler.DataAccess
 {
     public class ModuleManagementDBContext : DbContext
     {

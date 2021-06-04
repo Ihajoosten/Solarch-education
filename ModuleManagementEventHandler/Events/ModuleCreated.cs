@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using ModuleManagementEventHandler.Model;
-using Pitstop.Infrastructure.Messaging;
+using Infrastructure.Messaging;
 
-namespace StudyProgramManagementEventHandler.Events
+namespace ModuleManagementEventHandler.Events
 {
     public class ModuleCreated : Event
     {

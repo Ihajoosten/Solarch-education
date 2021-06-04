@@ -1,4 +1,4 @@
-﻿using Pitstop.Infrastructure.Messaging;
+﻿using Infrastructure.Messaging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
