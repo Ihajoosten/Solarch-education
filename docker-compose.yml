@@ -1,0 +1,74 @@
+version: '3'
+services:
+
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    container_name: rabbitmq
+    volumes:
+        - rabbitmqdata:/var/lib/rabbitmq
+    ports:
+        - "15672:15672"
+        - "5672:5672"
+    environment:
+        - RABBITMQ_DEFAULT_USER=rabbitmquser
+        - RABBITMQ_DEFAULT_PASS=DEBmbwkSrzy9D1T9cJfa
+        
+  sqlserver:
+    image: microsoft/mssql-server-linux:latest
+    container_name: sqlserver
+    volumes:
+        - sqlserverdata:/var/opt/mssql 
+    ports:
+        - "1434:1433"
+    environment:
+        - ACCEPT_EULA=Y 
+        - MSSQL_PID=Developer
+        - SA_PASSWORD=8jkGh47hnDw89Haq8LN2
+
+  modulemanagementapi:
+    image: solarch-education/modulemanagementapi:1.0
+    build: ModuleManagementAPI
+    depends_on:
+        - rabbitmq
+        - sqlserver
+    ports:
+        - "5000"
+    environment:
+        - ASPNETCORE_ENVIRONMENT=Production
+
+  studyprogrammanagementapi:
+    image: solarch-education/studyprogrammanagementapi:1.0
+    build: StudyProgramManagementAPI
+    depends_on:
+        - rabbitmq
+        - sqlserver
+    ports:
+        - "5100"
+    environment:
+        - ASPNETCORE_ENVIRONMENT=Production
+
+  modulemanagementeventhandler:
+    image: solarch-education/modulemanagementeventhandler:1.0
+    build: ModuleManagementEventHandler
+    container_name: modulemanagementeventhandler
+    depends_on:
+      - rabbitmq
+      - sqlserver
+    environment:
+      - DOTNET_ENVIRONMENT=Production
+
+  studyprogrammanagementeventhandler:
+    image: solarch-education/studyprogrammanagementeventhandler:1.0
+    build: StudyProgramManagementEventHandler
+    container_name: studyprogrammanagementeventhandler
+    depends_on:
+      - rabbitmq
+      - sqlserver
+    environment:
+      - DOTNET_ENVIRONMENT=Production
+
+volumes:
+  sqlserverdata:
+    external: true    
+  rabbitmqdata:
+    external: true
