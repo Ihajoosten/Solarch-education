@@ -430,26 +430,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Luc\\.nuget\\packages\\": {}
+    "C:\\Users\\Luc Joosten\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "3.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Luc\\Source\\Repos\\solarch-education\\solarch-education\\Infrastructure.Messaging\\Infrastructure.Messaging.csproj",
+      "projectUniqueName": "D:\\Development\\solarch-education\\solarch-education\\Infrastructure.Messaging\\Infrastructure.Messaging.csproj",
       "projectName": "Infrastructure.Messaging",
-      "projectPath": "C:\\Users\\Luc\\Source\\Repos\\solarch-education\\solarch-education\\Infrastructure.Messaging\\Infrastructure.Messaging.csproj",
-      "packagesPath": "C:\\Users\\Luc\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Luc\\Source\\Repos\\solarch-education\\solarch-education\\Infrastructure.Messaging\\obj\\",
+      "projectPath": "D:\\Development\\solarch-education\\solarch-education\\Infrastructure.Messaging\\Infrastructure.Messaging.csproj",
+      "packagesPath": "C:\\Users\\Luc Joosten\\.nuget\\packages\\",
+      "outputPath": "D:\\Development\\solarch-education\\solarch-education\\Infrastructure.Messaging\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Luc\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Luc Joosten\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -512,7 +510,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\Luc Joosten\\.dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }
