@@ -1,33 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\dev\\Solution Architecture\\Solarch-education\\StudyProgramManagementEventHandler\\StudyProgramManagementEventHandler.csproj": {}
+    "D:\\Development\\solarch-education\\solarch-education\\StudyProgramManagementEventHandler\\StudyProgramManagementEventHandler.csproj": {}
   },
   "projects": {
-    "C:\\dev\\Solution Architecture\\Solarch-education\\StudyProgramManagementEventHandler\\StudyProgramManagementEventHandler.csproj": {
+    "D:\\Development\\solarch-education\\solarch-education\\StudyProgramManagementEventHandler\\StudyProgramManagementEventHandler.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\dev\\Solution Architecture\\Solarch-education\\StudyProgramManagementEventHandler\\StudyProgramManagementEventHandler.csproj",
+        "projectUniqueName": "D:\\Development\\solarch-education\\solarch-education\\StudyProgramManagementEventHandler\\StudyProgramManagementEventHandler.csproj",
         "projectName": "StudyProgramManagementEventHandler",
-        "projectPath": "C:\\dev\\Solution Architecture\\Solarch-education\\StudyProgramManagementEventHandler\\StudyProgramManagementEventHandler.csproj",
-        "packagesPath": "C:\\Users\\Lars Akkermans\\.nuget\\packages\\",
-        "outputPath": "C:\\dev\\Solution Architecture\\Solarch-education\\StudyProgramManagementEventHandler\\obj\\",
+        "projectPath": "D:\\Development\\solarch-education\\solarch-education\\StudyProgramManagementEventHandler\\StudyProgramManagementEventHandler.csproj",
+        "packagesPath": "C:\\Users\\Luc Joosten\\.nuget\\packages\\",
+        "outputPath": "D:\\Development\\solarch-education\\solarch-education\\StudyProgramManagementEventHandler\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Lars Akkermans\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Luc Joosten\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://nuget.devexpress.com/eMQnqW7SD4EssVGnc8iK9eaxFUx4Ar1Z5vPeOcfJFXPkUuwoVK/api": {},
-          "https://remote.asamco.com/nuget/nuget": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
@@ -45,15 +38,27 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.3, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[5.0.6, )"
+              "version": "[5.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer.Design": {
+              "target": "Package",
+              "version": "[2.0.0-preview1-final, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[5.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools.DotNet": {
+              "target": "Package",
+              "version": "[2.0.3, )"
             },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
@@ -126,7 +131,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

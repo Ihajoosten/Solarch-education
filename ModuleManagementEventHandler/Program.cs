@@ -45,7 +45,7 @@ namespace ModuleManagementEventHandler
                 .ConfigureServices((hostContext, services) => {
                     services.AddTransient<ModuleManagementDBContext>((svc) => {
                         string sqlConnectionString =
-                            hostContext.Configuration.GetConnectionString("ModuleManagementCN");
+                            hostContext.Configuration.GetConnectionString("ModuleManagement");
                         var dbContextOptions = new DbContextOptionsBuilder<ModuleManagementDBContext>()
                             .UseSqlServer(sqlConnectionString)
                             .Options;

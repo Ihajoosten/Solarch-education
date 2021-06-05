@@ -2,6 +2,7 @@
 using Polly;
 using Serilog;
 using System;
+using System.Diagnostics;
 
 namespace ModuleManagementEventHandler.DataAccess
 {
@@ -10,6 +11,7 @@ namespace ModuleManagementEventHandler.DataAccess
         public static void Initialize(ModuleManagementDBContext context)
         {
             Log.Information("Module Database");
+            Debug.WriteLine("Trying to connect to database");
 
             Policy
                 .Handle<Exception>()
@@ -18,6 +20,8 @@ namespace ModuleManagementEventHandler.DataAccess
                 .Execute(() => context.Database.Migrate());
 
             Log.Information("Module Database done");
+            Debug.WriteLine("Connection established");
+
         }
     }
 }

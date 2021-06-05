@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
@@ -12,7 +13,7 @@ namespace StudyProgramManagementEventHandler.DataAccess
     {
         public static void Initialize(StudyProgramManagementDBContext context)
         {
-            Log.Information("StudyProgram Database");
+            Debug.WriteLine("Trying to connect to database");
 
             Policy
                 .Handle<Exception>()
@@ -20,7 +21,7 @@ namespace StudyProgramManagementEventHandler.DataAccess
                     (ex, ts) => { Log.Error("Error connection to DB. Retrying!"); })
                 .Execute(() => context.Database.Migrate());
 
-            Log.Information("StudyProgram Database done");
+            Debug.WriteLine("Connection established");
         }
     }
 }
