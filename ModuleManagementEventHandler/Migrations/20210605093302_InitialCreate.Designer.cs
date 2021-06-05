@@ -10,7 +10,7 @@ using ModuleManagementEventHandler.DataAccess;
 namespace ModuleManagementEventHandler.Migrations
 {
     [DbContext(typeof(ModuleManagementDBContext))]
-    [Migration("20210605091926_InitialCreate")]
+    [Migration("20210605093302_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

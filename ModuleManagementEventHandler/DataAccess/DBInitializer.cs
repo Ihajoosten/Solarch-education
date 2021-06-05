@@ -10,8 +10,7 @@ namespace ModuleManagementEventHandler.DataAccess
     {
         public static void Initialize(ModuleManagementDBContext context)
         {
-            Log.Information("Module Database");
-            Debug.WriteLine("Trying to connect to database");
+            Log.Information("Trying to connect to database Module Management");
 
             Policy
                 .Handle<Exception>()
@@ -19,9 +18,7 @@ namespace ModuleManagementEventHandler.DataAccess
                     (ex, ts) => { Log.Error("Error connection to DB. Retrying!"); })
                 .Execute(() => context.Database.Migrate());
 
-            Log.Information("Module Database done");
-            Debug.WriteLine("Connection established");
-
+            Log.Information("Connection successful and migration executed");
         }
     }
 }
