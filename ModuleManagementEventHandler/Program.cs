@@ -8,6 +8,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Infrastructure.Messaging.Configuration;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Serilog;
@@ -43,6 +44,7 @@ namespace ModuleManagementEventHandler
                         optional: false);
                 })
                 .ConfigureServices((hostContext, services) => {
+                    services.UseRabbitMQMessageHandler(hostContext.Configuration);
                     services.AddTransient<ModuleManagementDBContext>((svc) => {
                         string sqlConnectionString =
                             hostContext.Configuration.GetConnectionString("ModuleManagement");
@@ -55,7 +57,7 @@ namespace ModuleManagementEventHandler
 
                         return dbContext;
                     });
-                    // services.AddHostedService<EventHandler>();
+                    services.AddHostedService<EventHandler>();
                 })
                 .UseSerilog((hostContext, loggerConfiguration) => {
                     loggerConfiguration.ReadFrom.Configuration(hostContext.Configuration);

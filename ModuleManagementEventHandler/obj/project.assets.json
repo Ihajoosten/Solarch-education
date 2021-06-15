@@ -8563,32 +8563,40 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Luc Joosten\\.nuget\\packages\\": {}
+    "C:\\Users\\Lars Akkermans\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Development\\solarch-education\\solarch-education\\ModuleManagementEventHandler\\ModuleManagementEventHandler.csproj",
+      "projectUniqueName": "C:\\dev\\Solution Architecture\\Solarch-education\\ModuleManagementEventHandler\\ModuleManagementEventHandler.csproj",
       "projectName": "ModuleManagementEventHandler",
-      "projectPath": "D:\\Development\\solarch-education\\solarch-education\\ModuleManagementEventHandler\\ModuleManagementEventHandler.csproj",
-      "packagesPath": "C:\\Users\\Luc Joosten\\.nuget\\packages\\",
-      "outputPath": "D:\\Development\\solarch-education\\solarch-education\\ModuleManagementEventHandler\\obj\\",
+      "projectPath": "C:\\dev\\Solution Architecture\\Solarch-education\\ModuleManagementEventHandler\\ModuleManagementEventHandler.csproj",
+      "packagesPath": "C:\\Users\\Lars Akkermans\\.nuget\\packages\\",
+      "outputPath": "C:\\dev\\Solution Architecture\\Solarch-education\\ModuleManagementEventHandler\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Luc Joosten\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Lars Akkermans\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
-        "https://api.nuget.org/v3/index.json": {}
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://nuget.devexpress.com/eMQnqW7SD4EssVGnc8iK9eaxFUx4Ar1Z5vPeOcfJFXPkUuwoVK/api": {},
+        "https://remote.asamco.com/nuget/nuget": {}
       },
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\Development\\solarch-education\\solarch-education\\Infrastructure.Messaging\\Infrastructure.Messaging.csproj": {
-              "projectPath": "D:\\Development\\solarch-education\\solarch-education\\Infrastructure.Messaging\\Infrastructure.Messaging.csproj"
+            "C:\\dev\\Solution Architecture\\Solarch-education\\Infrastructure.Messaging\\Infrastructure.Messaging.csproj": {
+              "projectPath": "C:\\dev\\Solution Architecture\\Solarch-education\\Infrastructure.Messaging\\Infrastructure.Messaging.csproj"
             }
           }
         }
@@ -8698,7 +8706,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }
